@@ -41,7 +41,7 @@ function JekyllPost()
         let file_name = strftime("%Y-%m-%d-") . substitute(tolower(title), ' ', '-', 'g') . ".markdown"
         echo "Making that post " . file_name
         exe "e " . g:jekyll_path . "/_posts/" . file_name
-        let err = append(0, ['---', 'title: ' . title, 'layout: post', 'type: basic', 'short: ', 'time: ', 'loc: ', 'locname: ', 'description: ', 'tags: ', ' -', ' -', '---', ''])
+        let err = append(0, ['---', 'title: ' . title, 'layout: post', 'category: basic', 'short: ', 'time: ', 'loc: ', 'locname: ', 'description: ', 'tags: ', ' -', ' -', '---', ''])
     else
         echo "You must specify a title"
     endif
@@ -54,7 +54,7 @@ function JekyllLink()
         let file_name = strftime("%Y-%m-%d-") . substitute(tolower(title), ' ', '-', 'g') . ".markdown"
         echo "Making that post " . file_name
         exe "e " . g:jekyll_path . "/_posts/" . file_name
-        let err = append(0, ['---', 'title: ' . title, 'layout: post', 'type: link', 'time: ', 'linkto: ', 'description: ', 'tags: ', ' -', ' -', '---', ''])
+        let err = append(0, ['---', 'title: ' . title, 'layout: post', 'category: link', 'time: ', 'linkto: ', 'description: ', 'tags: ', ' -', ' -', '---', ''])
     else
         echo "You must specify a title"
     endif
@@ -67,7 +67,7 @@ function JekyllPic()
         let file_name = strftime("%Y-%m-%d-") . substitute(tolower(title), ' ', '-', 'g') . ".markdown"
         echo "Making that post " . file_name
         exe "e " . g:jekyll_path . "/_posts/" . file_name
-        let err = append(0, ['---', 'title: ' . title, 'layout: post', 'type: photo', 'time: ', 'imageurl: ', 'description: ', 'tags: ', ' -', ' -', '---', ''])
+        let err = append(0, ['---', 'title: ' . title, 'layout: post', 'category: photo', 'time: ', 'imageurl: ', 'description: ', 'tags: ', ' -', ' -', '---', ''])
     else
         echo "You must specify a title"
     endif
